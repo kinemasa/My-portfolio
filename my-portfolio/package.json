@@ -1,14 +1,17 @@
 {
-  "homepage":"https://kinemasa.github.io/My-portfolio/",
+
   "name": "my-portfolio",
+  "homepage": "https://kinemasa.github.io/My-portfolio/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "predeploy" :"npm run build",
-    "deploy" : "gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": " gh-pages -d build",
+    "eject":"react-scripts eject",
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && cp -r dist docs",
+    "rebuild":"vite build && -R docs && cp -r dist docs",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
